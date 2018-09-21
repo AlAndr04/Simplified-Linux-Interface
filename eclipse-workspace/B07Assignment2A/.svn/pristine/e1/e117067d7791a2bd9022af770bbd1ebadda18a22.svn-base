@@ -1,0 +1,8 @@
+Class name: Parse
+Parent Class: None
+Subclasses: None
+
+Responsibilities:
+*Parses commands into the command itself and its parameters
+Collaborators:
+None

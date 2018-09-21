@@ -1,0 +1,10 @@
+Class name: mkfile
+Parent Class: None
+Subclasses: None
+Responsibilities:
+*creates a file at current directory, or a path relative to current or full
+path
+Collaborators:
+*Directory
+*Traverse
+*File

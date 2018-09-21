@@ -1,0 +1,9 @@
+What did I do last time?
+	- Made a Tree class which interacts with output
+	- added error handling for Ls class
+What am I planning to do?
+	- Implement files and their respective commands
+	- Reformatting the Commands.java class into an abstract class/interface for the other commands
+Is there something I am blocked on?
+	- Commands.java refactoring needs consensus from rest of the team.
+	- How paths should be passed to my file commands

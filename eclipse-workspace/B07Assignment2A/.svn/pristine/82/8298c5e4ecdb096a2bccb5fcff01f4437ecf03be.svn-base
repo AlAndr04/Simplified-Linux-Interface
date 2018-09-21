@@ -1,0 +1,13 @@
+What did I do last time?
+	- Started brainstormming about the crc card. Came up with a rough sketch
+    	- Implemented class Input
+    	- Implemented class command_manager
+    	- Implemented class Validator		
+
+What do I plan to do now?
+	- Make Validator collaborate with Parser
+	- Work on the implementation of Parser
+		
+
+Am I blocked on anything?
+    	- No

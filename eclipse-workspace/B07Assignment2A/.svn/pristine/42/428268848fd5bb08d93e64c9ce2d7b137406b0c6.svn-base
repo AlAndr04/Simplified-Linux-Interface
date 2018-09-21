@@ -1,0 +1,28 @@
+package test.input;
+
+import static org.junit.Assert.*;
+
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import fileCommands.*;
+
+
+
+public class CurlTest {
+	private Curl curlTester;
+	
+	@Before
+	public void setUp() throws MalformedURLException, URISyntaxException{
+		curlTester = new Curl("http://www.cs.cmu.edu/~spok/grimmtmp/073.txt");
+	}
+	
+	@Test
+	public void testExecute() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,62 @@
+//Sprint 2 Backlog
+17 July to 23 July
+
+User Stories from Product Backlog that we will address in this sprint:
+
+Specific tasks to be accomplished:
+a-1.) J UNIT TESTING GENTLEMAN.
+b-1.)Continue implementation for -R (recursive option) for Ls and Grep.
+c-1.) Continue grep implementation.
+
+									TESTING RESPONSIBILITY BREAKDOWN:
+ (1) Abhinav Chaudhary
+List Classes here:
+-JShell
+-Cat
+-Echo
+-Input
+-Parse
+-Validator
+(2) Balaji Babu
+List Classes here:
+-Man
+-Output
+-Curl
+-Grep
+(3) Zhi Zhong Huang
+List Classes here:
+-Ls
+-Pwd
+-Traverse
+-Tree
+-Mkfile
+-Directory
+-File
+-FSElement
+(4) Alex Andros
+List Classes here:
+-Cd
+-Commands
+-Cp
+-Find
+-Mkdir
+-Mv
+-Popd
+-Pushd
+-CommandManager
+-ExecuteHistory
+-History
+
+These tasks are assigned as follows:
+
+User: Abhinav Chaudhary
+Tasks: (1)
+
+User: Balaji Babu
+Tasks: c-1,(2)
+
+User: Zhi Zhong Huang
+Tasks: b-1, (3)
+
+User: Alex Andros
+Tasks: (4), c-1

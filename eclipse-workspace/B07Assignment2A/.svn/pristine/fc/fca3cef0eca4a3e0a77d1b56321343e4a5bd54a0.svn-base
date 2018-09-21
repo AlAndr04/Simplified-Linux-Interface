@@ -1,0 +1,104 @@
+// **********************************************************
+// Assignment2:
+// Student1: Abhinav Chaudharu
+// UTORID username: chaud349
+// UT Student #: 1002707733
+// Author: Abhinav Chaudhary
+//
+// Student2: Alexandru Andros
+// UTORID username: androsal
+// UT Student #: 1004354263
+// Author: Alexandru Andros
+//
+// Student3: Balaji Babu
+// UTORID username: babubala
+// UT Student #:1003354871
+// Author: Balaji Babu
+//
+// Student4: Zhi Zhong Huang
+// UTORID username: huang472
+// UT Student #:1002671094
+// Author: Zhi Zhong Huang
+//
+//
+// Honor Code: I pledge that this program represents my own
+// program code and that I have coded on my own. I received
+// help from no one in designing and debugging my program.
+// I have also read the plagiarism section in the course info
+// sheet of CSC B07 and understand the consequences.
+// *********************************************************
+package dirCommands;
+
+import fileSystemObjects.*;
+import input.Location;
+import input.Output;
+import input.PathIncorrectException;
+import java.util.Arrays;
+import driver.JShell;
+
+/**
+ * Mv a.k.a Move class. Core Mv functions implemented here
+ * 
+ * @author babubala
+ *
+ */
+public class Mv extends Commands<Void> {
+  /**
+   * Type FSElement src: this is the source.
+   */
+  private FSElement src;
+  /**
+   * This is the destination.
+   */
+  private Directory dest;
+  /**
+   * This is the name of the source.
+   */
+  private String srcname;
+
+  /**
+   * This is the constructor for Mv, it initializes src dest and srcname, it
+   * takes a string array which is the input and location
+   * 
+   * @param input
+   * @param loc
+   * @return none
+   */
+  public Mv(String[] input, Location loc) {
+    this.src = Traverse.accessFS(input[0], loc.getRoot());
+    this.dest = (Directory) Traverse.accessFS(input[1], loc.getRoot());
+    this.srcname = input[1];
+  }
+
+  /**
+   * This is the execute method for mv, it does not return anything, it
+   * essentially executes mv.
+   * 
+   * @param None
+   * @return Void
+   */
+  public Void execute() {
+    if ((src != null) && (this.dest != null)) {
+      Directory temp = (Directory) dest.getParent();
+      while ((temp != null) && (temp != src)) {
+        temp = (Directory) temp.getParent();
+      }
+      if (temp != null) {
+        Output.NoMoveInDirectory();
+      } else {
+        this.src.removeFromParentRef();
+        src.setParent(dest);
+        dest.addToChildDir(src);
+      }
+    } else {
+      if (this.dest == null) {
+        Output.directoryFileNameInvalid();
+      }
+      if (this.src == null) {
+        Output.pathIncorrect(this.srcname);
+      }
+    }
+    return null;
+  }
+
+}

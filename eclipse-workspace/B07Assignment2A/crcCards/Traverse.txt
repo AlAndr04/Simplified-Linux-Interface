@@ -1,0 +1,10 @@
+Class name: Traverse
+Parent Class: None
+Subclasses: None
+
+Responsibilities:
+*Traverse from current directory to a given directory
+Collaborators:
+*directory
+*Pwd
+*FsElement

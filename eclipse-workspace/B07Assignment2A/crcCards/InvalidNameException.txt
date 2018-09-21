@@ -1,0 +1,6 @@
+Class Name: InvalidNameException
+Parent class: Exception
+Subclasses: None
+Responsibilities: Construct and release appropriate message in regards to situations in which InvalidNameException
+is raised.
+Collaborators: None

@@ -1,0 +1,12 @@
+What did i do last time?
+- Discussed with team on new design ideas for command manager that takes care of redirection,
+-so essentially a better design to handle redirection.
+-Worked on command curl, created class Curl and started implementation.
+-Figured out how to use in-built URL class and how to make use of collaboration with Echo.
+
+What am i planning to do?
+-Figure out how to implement grep cmd; how to code understanding of regex and recursively searching
+-directories etc.
+
+Is there something I am blocked on?
+-Not currently.

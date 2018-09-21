@@ -1,0 +1,13 @@
+Class name: Echo
+Parent class: Commands
+Responsibilities: 
+*Given a string, appends the string to a file given its name in the current
+directory OR *Overwrites content of file given its name in current directory.
+Collaborators: 
+*Mkfile
+*File
+*Output
+*Pwd
+*Directory
+*Parse
+*Traverse 

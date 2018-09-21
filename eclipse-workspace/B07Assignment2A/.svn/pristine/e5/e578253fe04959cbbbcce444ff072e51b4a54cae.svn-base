@@ -1,0 +1,24 @@
+package test.input;
+
+import dirCommands.*;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ManTest {
+	private Man manual;
+	
+	@Before
+	public void setUp() {
+		manual = new Man("exit");
+	}
+	//Testing execute command with arbitrary command name set in setUp method
+	@Test
+	public void testExecute() {
+		String actual = "Usage: exit\nQuits the program";
+		String expected = manual.execute();
+		assertEquals(actual,expected);			
+	}
+
+}

@@ -1,0 +1,10 @@
+Class name: Ls
+Parent Class: Commands
+Subclasses:None
+Responsibilities:
+f –R is present, recursively list all subdirectories
+*lists contents of directory in current directory
+Collaborators:
+*Output
+*Directory
+*NotDirectoryException

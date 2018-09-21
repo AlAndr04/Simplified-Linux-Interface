@@ -1,0 +1,21 @@
+package test.input;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import input.Input;
+
+public class InputTest {
+
+	@Test
+	public void testCreateInstanceOfInput() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGetUserInput() {
+		Input userInput = Input.createInstanceOfInput();
+	}
+
+}

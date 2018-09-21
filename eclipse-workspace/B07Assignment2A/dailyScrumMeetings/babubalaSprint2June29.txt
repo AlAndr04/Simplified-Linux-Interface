@@ -1,0 +1,11 @@
+What did I do last time?
+	-Tested man, it works
+	-Core dir cmds tested
+	-Discussed some ideas with team for files
+What am I planning to do?
+	- Change implementation of error handling to use exceptions
+	- Start thinking about plans for Sprint 3
+	- Sprint 3 will be our testing phase, so come up with ideas on how to test etc.
+Is there something I am blocked on?
+	- Other members need to throw exceptions in their code so i can catch them and deal with them.
+	

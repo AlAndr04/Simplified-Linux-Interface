@@ -1,0 +1,83 @@
+package test.input;
+
+import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
+import org.junit.Test;
+
+import input.Parse;
+
+public class ParseTest {
+
+	@Test
+	public void testParseNormal() {
+		String test1 = "mkdir abhi";
+		String test2 = "mkdir abhi /abhi/b07 /abhi/b07/A2";
+		String test3 = "cd a";
+		String[][] actOut1 = Parse.stringtoarray(test1);
+		String[][] actOut2 = Parse.stringtoarray(test2);
+		String[][] actOut3 = Parse.stringtoarray(test3);
+		String exp1 = "[mkdir, abhi]";
+		String exp2 = "[mkdir, abhi, /abhi/b07, /abhi/b07/A2]";
+		String exp3 = "[cd, a]";
+		assertEquals(exp1,Arrays.toString(actOut1[0]));
+		assertEquals(exp2,Arrays.toString(actOut2[0]));
+		assertEquals(exp3,Arrays.toString(actOut3[0]));
+	}
+	@Test
+	public void testParseEcho() {
+		String test1 = "echo \"This should work\" > pop.txt";
+		String test2 = "echo \"This should work\"";
+		String test3 = "echo \"This should work\" >> pop.txt ";
+		String[][] actOut1 = Parse.stringtoarray(test1);
+		String[][] actOut2 = Parse.stringtoarray(test2);
+		String[][] actOut3 = Parse.stringtoarray(test3);
+		String exp1 = "[echo, This should work,  > pop.txt]";
+		String exp2 = "[echo, This should work]";
+		String exp3 = "[echo, This should work,  >> pop.txt ]";
+		assertEquals(exp1,Arrays.toString(actOut1[0]));
+		assertEquals(exp2,Arrays.toString(actOut2[0]));
+		assertEquals(exp3,Arrays.toString(actOut3[0]));
+	}
+	@Test
+	public void testParseRecursive() {
+		String test1 = "ls -R /abhi/b07";
+		String test2 = "grep -R /abhi/b07";
+		String[][] actOut1 = Parse.stringtoarray(test1);
+		String[][] actOut2 = Parse.stringtoarray(test2);
+		String exp1 = "[lsr, /abhi/b07]";
+		String exp2 = "[grepr, /abhi/b07]";
+		assertEquals(exp1,Arrays.toString(actOut1[0]));
+		assertEquals(exp2,Arrays.toString(actOut2[0]));
+	}
+	@Test
+	public void testParseRedirection() {
+		String test1 = "ls > /abhi/b07/make.txt";
+		String test2 = "pwd > file1.txt";
+		String[][] actOut1 = Parse.stringtoarray(test1);
+		String[][] actOut2 = Parse.stringtoarray(test2);
+		String exp1 = "[ls]";
+		String exp2= "[pwd]";
+		assertEquals(exp1,Arrays.toString(actOut1[0]));
+		assertEquals(exp2,Arrays.toString(actOut2[0]));
+	}
+	@Test
+	public void testParseHistory(){
+		String test1 = "history 3";
+		String test2 = "!3";
+		String[][] actOut1 = Parse.stringtoarray(test1);
+		String[][] actOut2 = Parse.stringtoarray(test2);
+		String exp1 = "[history, 3]";
+		String exp2 ="[histcommand, 3]";
+		assertEquals(exp1,Arrays.toString(actOut1[0]));
+		assertEquals(exp2,Arrays.toString(actOut2[0]));
+	}
+	
+}
+	
+		
+	
+	
+
+

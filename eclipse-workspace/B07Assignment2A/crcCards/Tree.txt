@@ -1,0 +1,7 @@
+class name: Tree
+Parent Class: Commands
+Responsibilities:
+*Display the entire file system as a tree
+Collaborators:
+*Output
+*Directory

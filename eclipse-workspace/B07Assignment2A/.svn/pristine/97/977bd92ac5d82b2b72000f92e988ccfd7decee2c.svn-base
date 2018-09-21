@@ -1,0 +1,8 @@
+Class name: Rm
+Parent Class: command
+Subclasses:
+
+Responsibilities:
+*Removes/deletes an fsObject at a given pathname, name of file or directory
+Collaborators:
+*FSElement

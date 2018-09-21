@@ -1,0 +1,9 @@
+Class name: PathIncorrectException
+Parent Class: Exception
+Responsibilities:
+*Is given in situations where the path is not correctly given
+to a command
+or relative path
+Collaborators:
+*Travese
+*Mkdir

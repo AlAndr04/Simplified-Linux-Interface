@@ -1,0 +1,8 @@
+What did I do last time?
+	- Created cp.
+	- Created mv.
+	- Created ! command.
+What am I planning to do?
+	- Change command manager so that it works with redirection.
+Is there something I am blocked on?
+	- None.

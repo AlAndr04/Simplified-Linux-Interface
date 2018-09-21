@@ -1,0 +1,8 @@
+Class name: Find
+parent class: Commands
+Responsibilites: 
+*Finds files or directories with a specified name in a specific location
+collaborators: 
+*Output
+*Directory
+*Traverse

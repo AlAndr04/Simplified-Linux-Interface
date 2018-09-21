@@ -1,0 +1,8 @@
+What did I do last time?
+	- Worked on mkdir, cd and Traverse and fixed bugs
+	- Created history
+	- Implemented the restriction in mkdir
+What am I planning to do?
+	- Implement find
+Is there something I am blocked on?
+	- None

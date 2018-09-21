@@ -1,0 +1,7 @@
+Class Name: Cp
+Parent Class:Commands
+Subclasses:None
+Responsibilities:similar responsibilities to mv
+,but don’t remove OLDPATH(parameter). If OLDPATH is a directory, recursively 
+copy the contents.  
+Collaborators:FSElement, Directory, Location, Traverse, File, Output

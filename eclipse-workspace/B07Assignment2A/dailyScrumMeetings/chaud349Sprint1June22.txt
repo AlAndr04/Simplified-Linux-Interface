@@ -1,0 +1,10 @@
+What did i do last time?
+- Finished Working on the class Input, class Validator, class Parse
+- Added some methods to command manager in order to turn relative path to absolute path
+- Re-planned some stuff with the group and removed class rm
+- JShell is now open to be working with everyone.
+What do i plan to do now?
+- Work on sprint 2 and figure out what we have to do next
+- And Start working on sprin2 stuff.
+Am i blocked on anything?
+- No

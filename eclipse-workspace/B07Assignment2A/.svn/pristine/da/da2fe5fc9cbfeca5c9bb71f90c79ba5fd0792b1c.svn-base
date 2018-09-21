@@ -1,0 +1,186 @@
+// **********************************************************
+// Assignment2:
+// Student1: Abhinav Chaudharu
+// UTORID user_name: chaud349
+// UT Student #: 1002707733
+// Author: Abhinav Chaudhary
+//
+// Student2: Alexandru Andros
+// UTORID user_name: androsal
+// UT Student #: 1004354263
+// Author: Alexandru Andros
+//
+// Student3: Balaji Babu
+// UTORID user_name: babubala
+// UT Student #:1003354871
+// Author: Balaji Babu
+//
+// Student4: Zhi Zhong Huang
+// UTORID user_name: huang472
+// UT Student #:1002671094
+// Author: Zhi Zhong Huang
+//
+//
+// Honor Code: I pledge that this program represents my own
+// program code and that I have coded on my own. I received
+// help from no one in designing and debugging my program.
+// I have also read the plagiarism section in the course info
+// sheet of CSC B07 and understand the consequences.
+// *********************************************************
+package fileCommands;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import dirCommands.*;
+import dirCommands.Traverse;
+import driver.JShell;
+import fileSystemObjects.Directory;
+import fileSystemObjects.File;
+import input.Output;
+import input.Parse;
+import input.PathIncorrectException;
+import input.UniqueNameException;
+
+public class Echo extends Commands<Void> {
+  // Initiallizing Variables
+  private int size;
+  private String content;
+  private String fileAndOperator;
+  private boolean appendFile = false;
+  private boolean newFile = false;
+
+  /**
+   * Constructor for object Echo (Command Echo). Takes Input and breaks it into
+   * substring .
+   * 
+   * @param input: Array String
+   * @return None
+   */
+  public Echo(String[] input) {
+    // Getting the size of the echo command
+    this.size = input.length;
+    // Case 1 : When >>echo "I love Apples"
+    if (size == 1) {
+      this.content = input[0];
+    }
+    // Case 2 : When :-> echo "I love Apples" > apples.txt
+    // Case 3 : When :-> echo "but I like mangoes too" >> apples.txt
+    if (size == 2) {
+      // "I love Apples"
+      this.content = input[0];
+      // ">apples.txt"
+      this.fileAndOperator = input[1];
+      // Taking care of Case 3 here
+      if (fileAndOperator.contains(">>")) {
+        this.appendFile = true;
+        // ">> apples.txt"
+        this.fileAndOperator = this.fileAndOperator.replaceAll(">>", "");
+        this.fileAndOperator = this.fileAndOperator.replaceAll("\\s+", "");
+      }
+      // Taking care of Case 2 here
+      else if (fileAndOperator.contains(">")) {
+        this.newFile = true;
+        // "> apples.txt"
+        this.fileAndOperator = this.fileAndOperator.replaceAll(">", "");
+        this.fileAndOperator = this.fileAndOperator.replaceAll("\\s+", "");
+      } else {
+        Output.invalidInput();
+      }
+    }
+  }
+
+  /**
+   * Executes the cat command, with already given file(s) parameter(s)
+   * 
+   * @param None
+   * @return None
+   */
+  public Void execute() {
+	String[][] pathArray;
+	String[] currPathArray = null;
+	String[] currPathMk = null;
+    if (size == 1) {
+      Output.printTextToShell(content);
+      }
+	if (size == 2) {
+    	pathArray = currPathArr();
+    	currPathArray = pathArray[0];
+    	currPathMk = pathArray[1];
+      }
+        if (newFile) {
+        	try {
+				newfile(currPathArray, currPathMk);
+			} catch (PathIncorrectException e) {
+		        Output.pathIncorrect(e.toString());
+			}
+        }
+        else if (appendFile) {
+        	appendfile(currPathArray);
+      }
+    return null;
+  }
+  public String[][] currPathArr() {
+	// Getting the path is a string form eg : "/Abhi/Document/B07/"
+      String currPath = Pwd.returnPathFromRoot(JShell.curr_dir);
+      // System.out.println("this is the file "+curr_path);
+      String currPathStringMk =
+          "*/" + currPath.substring(1, currPath.length());
+      String currPathString =
+          "*/" + currPath.substring(1, currPath.length()) + "/"
+              + fileAndOperator;
+      // Changing the path string into an array [ ,Abhi,Document,B07]
+      String[] currPathArray = currPathString.split("/");
+      String[] currPathMk = currPathStringMk.split("/");
+      // Add the root in the array [ / , Abhi, Document, B07]
+      currPathArray[0] = "/";
+      currPathMk[0] = "/";
+      if (currPath.equals("/")) {
+        currPathArray = new String[2];
+        currPathArray[0] = "/";
+        currPathArray[1] = fileAndOperator;
+      }
+      String[][] retArr = {currPathArray, currPathMk};
+	return retArr;
+  }
+  
+  public void newfile(String[] currPathArray, String[] currPathMk) 
+		  throws PathIncorrectException {
+	  if (Traverse.returnGivenPathFromRootFile(currPathArray) == null) {
+	      Mkfile file = new Mkfile(currPathMk);
+	      File file_made;
+	      try {
+	        file_made = file.mkFileWPath(fileAndOperator);
+	        file_made.addToContent(content);
+	      } catch (PathIncorrectException e) {
+	        Output.pathIncorrect(e.toString());
+	      } catch (UniqueNameException e) {
+	        Output.nameNotValid(e.toString());
+	      }
+	      // Appending the contents of the file to the the node...
+    } else {
+	      // Find the path of the file
+	      File found_file =
+	          Traverse.returnGivenPathFromRootFile(currPathArray);
+	      // Delete the contents of the file
+	      found_file.delStrings();
+	      // Add the content
+	      found_file.addToContent(content);
+	  
+  }
+}
+  public void appendfile(String[] currPathArray){ {
+	 try {
+	// Find the path of the file
+      File foundFile =
+          Traverse.returnGivenPathFromRootFile(currPathArray);
+      // Add the contents
+      content = "\n" + content;
+      foundFile.addToContent(content);
+    }
+   catch (PathIncorrectException e) {
+    Output.pathIncorrect(e.toString());
+
+  }
+  
+}}}
+

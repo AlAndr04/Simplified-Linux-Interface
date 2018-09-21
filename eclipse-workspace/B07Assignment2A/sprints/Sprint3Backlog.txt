@@ -1,0 +1,47 @@
+//Sprint 2 Backlog.
+June 29 to July 2 (unless extention, please extension?)
+
+Note: Echo is not finished yet, which switches to this sprint.
+Note: Command superclass was not created, which switches to this sprint.
+Note: Find does not work yet with files, only with directories.
+
+User Stories:
+A.)As a user, I would like to find the path of files given specific directories to search.
+B.)As a user, I would like to be able to create a file.		    
+C.)As a user, I would like to add text to the contents of an already existing file.
+D.)As a user, I would like to concatenate the contents of multiple files and output it
+E.)As a user, I would like to output the contents of a file.
+
+Specific tasks to be accomplished:
+
+1.): We are creating a command super class that allows all other commands to inherit from, it essentially retains the blueprint for the commands, and executes.
+2.): Do thorough testing of the commands.
+	2.1.): Do the testing for mkdir, pushd, popd, history.
+	2.2.): Do the testing for ls, pwd, tree.
+	2.3.): Do the testing for cd, cat, man.
+	2.4.): Do the testing for echo, find.
+3.): Work on the documentation of the code.
+	3.1): Do the documentation of the following: cd, mkdir, find, Traverse, pushd, popd, history.
+	3.2): Do the documentation of ls, pwd, tree, mkfile, commands, NotDirectoryException, UniqueNameException, FSElement, Directory, File.
+	3.3): Do the documentation of man, cat, output, Validator.
+	3.4): Do the documentation of JShell, input, echo, parse, Command manager.
+4.): Be able to close the scanner that stores input, so the window will close.
+
+a-1: Implement the find class so that it works with files as well.
+b-1/c-1/d-1: Work on the implementation of echo class so it can both override and append content.
+e-1: Need to create a Cat class which works with the Output class (collaboration), with the Cat command able to take care of
+             being given multiple parameters that are files. Output will have a method that will simply print a String given.
+These tasks are assigned as follows:
+
+User: Abhinav Chaudhary
+Tasks: b-1/c-1/d-1, 2.4, 3.4
+
+User: Balaji Babu
+Tasks: 4, 2.3, 3.3
+
+User: Zhi Zhong Huang
+Tasks: 1, 2.2, 3.2
+
+User: Alex Andros
+Tasks: a-1, 2.1, 3.1
+

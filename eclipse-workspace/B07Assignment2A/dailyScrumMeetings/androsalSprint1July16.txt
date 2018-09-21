@@ -1,0 +1,9 @@
+What did I do last time?
+	- Fixed bugs in cp and mv
+	- Worked on command manager and redirection.
+	- Worked on grep.
+What am I planning to do?
+	- Fix grep.
+	- Work on test cases.
+Is there something I am blocked on?
+	- None.

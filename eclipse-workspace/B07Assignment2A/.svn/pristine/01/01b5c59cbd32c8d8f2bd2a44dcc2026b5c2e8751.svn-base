@@ -1,0 +1,76 @@
+//Sprint 2 Backlog.
+June 22 to June 28
+
+Note: Removed Rm class requirement from sprint 1 (task c-1)
+Note: Output interaction with J-shell not figured out yet, so it was not worked on (a-1)
+Note: Now all classes can interact with J-Shell i.e everyone will be working on it
+Note: FSobjects has been changed to FSElement
+Note: Regarding h-1 in sprint 1, we opted for the inbuilt stack class in JAVA instead of making our own stack class.
+Note: Removed user story, "As a user I would like to delete  a file", as it is not required.
+Note: Removed user story, "As a user I would like to exit the program:, as it was done in sprint1.
+
+
+User Stories:              	
+B.)As a user, I would like to store files and directories in a directory.       				     	
+C.)As a user, I would like to create a file.										    					    
+E.)As a user, I would like to add text to the contents of an already existing file.    										    
+G.)As a user, I would like to concatenate the contents of multiple files and output it
+H.)As a user, I would like to output the contents of a file.							
+I.)As a user, I would like to output the manual for a particular command.			    									    
+K.)As a user, I would like to see my previous commands used during a session.		    
+L.)As a user, I would like to input text and have its exact contents displayed.
+M.)As a user, I would like to print out the file-system in a tree form.
+N.)As a user, I would to find files or directories with a specific name in a specified directory.
+O.)As a user, I would like to see what's in the directory.
+
+Specific tasks to be accomplished:
+
+1.): We are creating a command super class that allows all other commands to inherit from, it essentially retains the blueprint for the commands, and executes.
+2.): Deal with naming directory conventions for Mkdir, use Output to output the appropriate error if naming conventions are not met.
+
+b-1: Have to implement file storage, have already worked on directory creation
+c-1: Implement a class that is able to create a file. This does not have to be a separate class, it could be part of Echo but
+	 regardless, this class is used for redirection of a string into a file via the echo cmd, if the file does not exist it is made.
+	 
+Note: (Can instead create a class with a responsibility to open a file for writing)(Part of the echo class/cmd)Need to open and close the file for writing
+
+e-1: (PART OF THE ECHO CLASS/cmd)Need to modify the file by opening an FsElement node and editing the data part(variable of node((String)) of the node.
+g-1/h-1: Need to create a Cat class which works with the Output class (collaboration), with the Cat command able to take care of
+	     being given multiple parameters that are files. Output will have a method that will simply print a String given.
+i-1: Need to create a man class.
+i-2: Have to implement a dictionary implementation where the key is the cmd name and the value is the "manual"(String) for the cmd.
+     This is good as, if the user tries to search for the manual for a cmd not implemented, it can easily be deduced through dictionary methods
+     that that the key is not present and an error can be outputted (no need for multiple if else statements).
+k-1: Create a static method implemented somewhere that keeps track of the cmds or create a class History for the cmd History.
+     Keep in mind History can also take a parameter (See assignment page)
+l-1: Create a echo class.
+l-2: collaborate with Output and simply give output the string of input from the user and Output will output it.
+m-1: Create a class Tree that will collaborate with Output. The class Tree will essentially traverse the file system and send
+     information/utilize output in a yet to be decided way, to output the file-system in a tree form.
+n-1: Create a class Find. This is will utilize class Traverse. i.e through inheritance or collaboration.
+n-2: Take care of dealing with its parameters (look at assignment page)
+n-3: Deal with situations in which Find can result in an error, collaborate with Output in that it uses Output to print an
+	 appropriate error
+n-4: Create a static method in Output that prints the appropriate error
+o-1: Base functionality of Ls (current directory visual) is implemented but need to handle when Ls is given bad input (an error must be outputted).
+	 Collaborate with Output. Use the appropriate method to output an error
+o-2: Make sure additional parameters of Ls is implemented such as when it is given paths (check assignment page).
+	 To implement this functionality it might need to interact with traversal and cat, as if a path with a file name at the end is given,
+	 the contents of the file are simply printed.
+o-3: Create a static method in Output that prints the appropriate error.
+
+
+These tasks are assigned as follows:
+
+User: Abhinav Chaudhary
+Tasks: 1, e-1, g-1/h-1, l-1, l-2
+
+User: Balaji Babu
+Tasks: i-1, i-2, n-4, o-3
+
+User: Zhi Zhong Huang
+Tasks: b-1, c-1, m-1, o-1, o-2
+
+User: Alex Andros
+Tasks: 2, k-1, n-1, n-2, n-3
+

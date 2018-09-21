@@ -1,0 +1,37 @@
+//Sprint1Backlog
+10th July to 16st July
+
+User Stories from Product Backlog that we will address in this sprint:
+a.)As a user, I would like to be able to redirect a command output to a file.
+b.)As a user, I would like to execute the nth command in history
+c.)As a user, I would like to move or copy files.
+d.)As a user, I would like for some commands to be able to access all subdirectories of a directory.
+e.)As a user, I would like to extract a file from URL into the current directory.
+f.)As a user, I would like to print the output of multiple files.
+g.)As a user, I would like to find lines in file(s) with a specific delimiter.
+Specific tasks to be accomplished:
+a-1.)Implement a way to redirect output, either call echo or  create another method for classes.
+a-2.)Change Command Manager accordingly.
+a-3.)/d-2.)Add the conditions for accepting redirection and subdirectories in Validator.
+b-1.)Work on the implementation of ! command, which is Execute_History class.
+c-1.)Work on the implementation of move command.
+c-2.)Work on the implementation of copy command.
+d-1.)Add the feature for ls so that it can work with subdirectories.
+e-1.)Implement the curl class.
+f-1.)Work on the class cat so that it can accpet multiple files, if that is not implemented yet.
+g-1.)Implement the grep class.
+
+
+These tasks are assigned as follows:
+
+User: Abhinav Chaudhary
+Tasks: a-1, a-2, a-3
+
+User: Balaji Babu
+Tasks: e-1, g-1
+
+User: Zhi Zhong Huang
+Tasks: d-1, d-2, f-1
+
+User: Alex Andros
+Tasks: b-1, c-1, c-2

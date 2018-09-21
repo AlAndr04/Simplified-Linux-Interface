@@ -1,0 +1,36 @@
+package dirCommands;
+
+import fileSystemObjects.*;
+import input.Output;
+import input.PathIncorrectException;
+import java.util.Arrays;
+import driver.JShell;
+
+public class Mv extends Commands<Void> {
+  private FSElement src;
+  private Directory dest;
+  private String srcname;
+
+  public Mv(String[] input) {
+      this.src = Traverse.accessFS(input[0], JShell.root);
+      this.dest = (Directory) Traverse.accessFS(input[1], JShell.root);
+      this.srcname = input[1];
+  }
+
+  public Void execute() {
+    if ((src != null) && (this.dest != null)) {
+      this.src.removeFromParentRef();
+      src.setParent(dest);
+      dest.addToChildDir(src);
+    } else {
+      if (this.dest == null){
+      Output.directoryInvalid();
+      }
+      if (this.src == null) {
+        Output.pathIncorrect(this.srcname);
+      }
+    }
+    return null;
+  }
+  
+}

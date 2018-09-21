@@ -1,0 +1,10 @@
+What did I do last time?
+	-Discussed with team on how to implement unit testing, commenting, using polymorphism and other design patterns
+	-Created and completed Mkfile, NotDirectoryException and UniqueNameException
+	-Tweaked and completed File.java
+What am I planning to do?
+	-Comment and work on unit testing
+	-Redo Commands.java
+Is there something I am blocked on?
+	-How to implement a better Commands.java that all other commands can interact with
+	

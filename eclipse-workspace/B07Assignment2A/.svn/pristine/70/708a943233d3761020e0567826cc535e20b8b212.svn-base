@@ -1,0 +1,9 @@
+What did I do last time?
+	- worked on ls to recursively list all subdirectories
+	- worked on commands to handle generics
+	- working on redirect
+What am I planning to do?
+	- Work on commands to they return a string when appropriate
+	- Do some testing an add some exception classes, throw stuff
+Is there something I am blocked on?
+	- None.

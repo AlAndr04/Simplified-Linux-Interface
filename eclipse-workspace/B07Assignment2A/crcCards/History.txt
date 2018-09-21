@@ -1,0 +1,8 @@
+Class name: History
+Parent Class: Commands
+Subclasses:None
+Responsibilities:
+*Stores the list of previous commands to be displayed in the future
+Collaborators:
+*Input
+*Output

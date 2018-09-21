@@ -1,0 +1,5 @@
+Class Name: Location
+Parent Class:None
+Subclasses:None
+Responsibilities:Stores details about directories, such as current directory.
+Collaborators:Directory

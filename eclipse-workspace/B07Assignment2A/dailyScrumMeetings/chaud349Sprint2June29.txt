@@ -1,0 +1,9 @@
+What did i do last time?
+-Finished working on Commands made it work for the demo ; still think we can make it more efficent
+What do i plan to do now?
+-Echo command
+-Append 
+-Documentation
+-Testing
+Am i blocked on anything?
+- Some of the commands don't seem to be working properly. Re-discuss the issues with group members

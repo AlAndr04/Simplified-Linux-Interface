@@ -1,0 +1,9 @@
+Class name: Ls
+Parent Class: Commands
+Subclasses:None
+Responsibilities:
+*lists contents of directory in current directory
+Collaborators:
+*Output
+*Directory
+*NotDirectoryException

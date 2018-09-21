@@ -1,0 +1,6 @@
+class name: UniqueNameException
+parent class: Exception
+subclasses:
+Responsibilities: 
+*Handle uniqueName error
+Collaborators:

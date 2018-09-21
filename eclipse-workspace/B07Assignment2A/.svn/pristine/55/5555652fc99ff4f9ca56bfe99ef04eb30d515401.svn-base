@@ -1,0 +1,10 @@
+What did I do last time?
+	- Fixed grep.
+	- Fixed bugs in move.
+	- Worked on test cases.
+What am I planning to do?
+	- Work on test cases.
+	- Change implementation of commands, because Mock JShell completely
+screws with everything.
+Is there something I am blocked on?
+	- None.

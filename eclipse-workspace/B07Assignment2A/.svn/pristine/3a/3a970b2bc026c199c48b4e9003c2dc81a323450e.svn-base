@@ -1,0 +1,81 @@
+package test;
+
+import java.util.Arrays;
+import java.util.HashMap;
+
+
+public class MockParse {
+	String[] output = {"[[mkdir, abhi, /abhi/Doc, /abhi/Doc/B07], null]",
+			"[[mkdir, /abhi/apple], null]",
+			"[[mkdir, /Abhi/Doc/], null]",
+			"[[cd, a, cd, /b/c/f, cd, /Hello/], null]",
+			"[[ls-R, /abhi/cdcbo7], null]",
+			"[[ls], [> pop.txt]]",
+			"[[ls], [> /Abhi/cscbo7.txt]]",
+			"[[pwd], null]",
+			"[[pwd], [> /Abhi/fileName.txt]]",
+			"[[mv, a/b/apple.txt, a/b/c], null]",
+			"[[mv, apple.txt, a/b/b], null]",
+			"[[cp, a/b/apple.txt, a/b/c], null]",
+			"[[cp, apple.txt, a/b/b], null]",
+			"[[cat, apple.txt], null]",
+			"[[cat, /Abhi/Document/apple.txt], null]",
+			"[[curl, http://www.cs.cmu.edu/~spok/grimmtmp/073.txt], null]",
+			"[[curl, http://www.ub.edu/gilcub/SIMPLE/simple.html], null]",
+			"[[echo, This should work,  > pop.txt], null]",
+			"[[echo, This should work], null]",
+			"[[echo, This should work,  >>pop.txt], null]",
+			"[[manecho], null]",
+			"[[man, boooo], null]",
+			"[[pushd, /user/Abhi/Doc, pushd, Doc, popd], null]",
+			"[[history, 5, !3], null]",
+			"[[grep-R, /abhi/documents/b07, grep, /abhi/doc/pop], null]"};
+	String[] input = {"mkdir abhi /abhi/Doc /abhi/Doc/B07 ",
+			 "mkdir /abhi/apple",
+			 "mkdir /Abhi/Doc/",
+			"cd a cd /b/c/f cd /Hello/",
+			"ls -R /abhi/cdcbo7",
+			"ls > pop.txt",
+			" ls > /Abhi/cscbo7.txt",
+			"pwd",
+			"pwd > /Abhi/fileName.txt",
+			"mv a/b/apple.txt a/b/c ",
+			"mv apple.txt a/b/b",
+			"cp a/b/apple.txt a/b/c ",
+			"cp apple.txt a/b/b",
+			"cat apple.txt  ",
+			" cat /Abhi/Document/apple.txt",
+			"curl http://www.cs.cmu.edu/~spok/grimmtmp/073.txt",
+			" curl http://www.ub.edu/gilcub/SIMPLE/simple.html",
+			"echo \"This should work\" > pop.txt",
+			" echo \"This should work\"",
+			" echo \"This should work\" >>pop.txt",
+			"man echo","man boooo",
+			"pushd /user/Abhi/Doc pushd Doc popd",
+			"history 5 !3",
+			"grep -R /abhi/documents/b07 grep /abhi/doc/pop"};
+	static HashMap<String, String> parsedString = new HashMap<>();
+	public MockParse() {
+		for(int i=0; i<input.length; i++) {
+			  parsedString.put(input[i],output[i]);  
+			}
+	}
+
+	public static String[][] stringtoarray(String instring){
+		String output = parsedString.get(instring);
+		output.replaceAll("[[", "!");
+		output.replaceAll("],","!" );
+		output.replaceAll("]","!" );
+		String[] pop = output.split("!");
+		String[] a1 = Arrays.copyOfRange(pop, 0, (pop.length)-2);
+		if(a1[(a1.length-1)] != null) {
+			String[][] ret = {a1,{a1[(a1.length-1)]}};
+			return ret;
+		}
+		else {
+			String[][] ret = {a1,null};
+			return ret;
+		}
+	}
+
+}

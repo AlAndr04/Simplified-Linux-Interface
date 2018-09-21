@@ -1,0 +1,32 @@
+package test.input;
+
+import static org.junit.Assert.*;
+
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import fileCommands.*;
+
+
+
+public class CurlTest {
+	//need to use mock j-shell and i guess find?
+	private Curl curlTester;
+	private MockJShell fs;
+	
+	
+	@Before
+	public void setUp() throws MalformedURLException, URISyntaxException{
+		curlTester = new Curl("http://www.cs.cmu.edu/~spok/grimmtmp/073.txt",
+		    fs.MockLocation);
+	}
+	
+	@Test
+	public void testExecute() {
+		fail("Not yet implemented");
+	}
+
+}

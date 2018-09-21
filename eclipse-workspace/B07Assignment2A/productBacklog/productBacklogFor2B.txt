@@ -1,0 +1,8 @@
+User Stories                                                                                  	  |Time Estimate
+
+As a user, I would like to execute the nth command in history.                                    |1 hour
+As a user, I would like to see the contents of  subdirectories of a directory                     |2 hours
+As a user, I would like to be able to redirect the output of a command into a file.				  |2 hours
+As a user, I would like to move or copy files into other directories.				  			  |4 hours
+As a user, I would like to retrieve a file from URL into the current directories.				  |3 hours
+As a user, I would like to find lines in a file(s) that has a specific set of characters          |4 hours

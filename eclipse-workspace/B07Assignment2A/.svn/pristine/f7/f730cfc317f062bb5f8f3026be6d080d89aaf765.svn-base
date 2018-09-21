@@ -1,0 +1,8 @@
+Class name: Cd
+Parent Class: Commands
+Subclasses:None
+Responsibilities:
+*Switches active directory to given directory, whether absolute 
+or relative path
+Collaborators:
+*Dir

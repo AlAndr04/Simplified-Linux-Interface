@@ -1,0 +1,13 @@
+What did i do last time?
+-Created additional methods for Output, i.e error outputting methods and output method for class Tree and Man
+-Helped with debugging bugs in mkdir and cd (directory storing bugs)
+-Created class Man for the cmd Man
+-Used a dictionary implemenation for class Man
+
+What do i plan to do now?
+-Test Man
+-Test out directory functionality to make sure core directory commands work
+-Make plans with team to tackle files.
+
+Am i blocked on anything?
+Nope.

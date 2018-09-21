@@ -1,0 +1,11 @@
+What did I do last time?
+	- Worked on mkdir and pushd
+	- Collaborated with teammates regarding the implementation of Traverse
+	  as well as Directory Stack.
+	- Brainstormed the implement
+What am I planning to do?
+	- Fix the bugs for mkdir and pushd
+	- Finish cd and popd
+Is there something I am blocked on?
+	- Waiting on the gathering to change the design implementation. So far
+	  working with the same implementation.

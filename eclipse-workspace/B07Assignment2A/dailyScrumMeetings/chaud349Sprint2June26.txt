@@ -1,0 +1,7 @@
+What did i do last time?
+-Trying to finalize commands class
+- JShell is now open to be working with everyone.
+What do i plan to do now?
+-File System directory
+Am i blocked on anything?
+- Some of the commands don't seem to be working properly. Re-discuss the issues with group members

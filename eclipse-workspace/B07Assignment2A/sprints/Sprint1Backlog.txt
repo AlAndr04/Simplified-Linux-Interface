@@ -1,0 +1,42 @@
+//Sprint1Backlog
+15th June to 21st June
+
+User Stories from Product Backlog that we will address in this sprint:
+a.)As a user I would like to make a directory.
+b.)As a user, I would like to be told, if I inputted a wrong command.
+c.)As a user, I would like to delete a directory
+d.)As a user, I would like to navigate between directories.
+e.)As a user, I would like to see what's in the directory.
+f.)As a user, I would like to output the path of the current directory path.
+g.)As a user, I would like to return to a past directory.  
+h.)As a user, I would like to save a directory to navigate it at a future time.
+
+Specific tasks to be accomplished:
+a-1.)Work on J-Shell, i.e create classes Input and Output,which would interact with J-Shell.
+a-2.)Implement sub-classes for Input(ie. class Validator, class Parse, class Command_manager).
+a-3.)Work on the implementation of class Validator.
+a-4.)Work on the implementation of class Parse.
+a-5.)Work on the implementation of class Command_manager.
+a-6.)Create a class called FsObjects as a parent class for class file and class dir.
+a-7./e-1/f-1)Implement a class Dir_command which has three subclasses : Traverse , ls , pwd.
+a-8/d-1.)Work on the implementation of class Traverse .
+a-9/g-1.)Create two subclasses under class Traverse: mkdir, cd.
+b-1.)Work on the implementation of class Output which would raise an error if the user input is incorrect.
+c-1.)Create a class rm as a child of comand_manager which would delete a dir/file.
+h-1.)Create a class Directory_stack.
+h-2.)Implement two methods(ie, pushdir, popdir).
+
+
+These tasks are assigned as follows:
+
+User: Abhinav Chaudhary
+Tasks: a-2, a-3, a-4, a-5
+
+User: Balaji Babu
+Tasks: a-1, b-1, c-1
+
+User: Zhi Zhong Huang
+Tasks:a-6, (a-7./e-1/f-1), a-8
+
+User: Alex Andros
+Tasks: h-1, h-2, a-9

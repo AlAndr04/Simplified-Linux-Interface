@@ -1,0 +1,9 @@
+Class name: JShell
+Subclasses:None
+
+Responsibilities:
+*Acts as an interface to the user to accept input and display output
+*Display information to the user
+*Provides an interface for the user to interact with the filesystem
+Collaborators:
+*Directory

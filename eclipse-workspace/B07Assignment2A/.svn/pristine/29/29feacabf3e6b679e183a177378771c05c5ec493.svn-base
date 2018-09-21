@@ -1,0 +1,5 @@
+class name: NotDirectoryException
+Parent class: Exception
+Responsibilites: 
+*Handle error of invalid directory
+Collaborators:

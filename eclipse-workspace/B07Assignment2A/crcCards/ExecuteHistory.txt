@@ -1,0 +1,6 @@
+Class Name: ExecuteHistory
+Parent Classes: Commands
+Subclasses:None
+Responsibilities:This command will recall any of previous history by its number(>=1)  
+preceded by an exclamation point (!).
+Collaborators:Location, Output, CommandManager

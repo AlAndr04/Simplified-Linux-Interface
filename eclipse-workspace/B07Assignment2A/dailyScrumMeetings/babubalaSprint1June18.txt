@@ -1,0 +1,15 @@
+What did I do last time?
+    - Created class Output and started working on it. Primarly worked on error outputs.
+    - discussed implementation of directory pathname as a parameter for the mkdir, Traverse, cd commands with teammates
+	- Need to change how J shell interacts with Input and Output as Input subclasses need to change from inheritance into composition.
+	- Created RmDir class (used for commands that delete a directory
+
+What do I plan to do now?
+    - Work more on Jshell
+    - work on figuring out tasks for sprint 2
+	- Need to change how J shell interacts with Input and Output as Input subclasses need to change from inheritance into composition.
+
+Am I blocked on anything?
+    - Need command classes that actually output to figure out how to implement the output part of cmds in the Output class
+	- Need to discuss with teammates finalized implementation of basis of Jshell and Input.
+	- Need calrifcation on directory structure so i can complete RmDir, need classes such 

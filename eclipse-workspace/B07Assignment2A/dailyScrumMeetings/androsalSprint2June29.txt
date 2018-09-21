@@ -1,0 +1,9 @@
+What did I do last time?
+	- Solved bugs that wer showing up in the overall code.
+	- Implemented find, but so far I don't know if it works with files
+What am I planning to do?
+	- Work on documentation.
+	- Work on testing.
+	- Change the find to work with files, if that is necessary.
+Is there something I am blocked on?
+	- Echo needs to be able to create files in order for find to be tested.

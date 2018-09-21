@@ -1,0 +1,32 @@
+package test.input;
+
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+import dirCommands.Tree;
+
+public class TreeTest {
+  private MockJShell mockJS;
+  @Before
+  public void setUp() throws Exception {
+    mockJS = new MockJShell();
+  }
+
+  @Test
+  public void testTree() {
+    String compString = "/\n\tDir_1\n\t\tDir_1_1\n\t\tfile_1_1\n\t\tDir_1_2\n"
+        + "\tDir_2\n\tDir_3\n\tDir_4\n\tDir_5\n\t\tDir_5_1\n\t\tfile_5_1"
+        + "\n\t\tDir_5_2\n";
+    Tree testTree = new Tree();
+    assertEquals(compString,testTree.buildTree(mockJS.getRootDir(), 0));
+  }
+  //fix this later to use the Mock JShell's root directory
+  @Test
+  public void testExecuteGoodInput() {
+    String compString = "/\n\tDir_1\n\t\tDir_1_1\n\t\tfile_1_1\n\t\tDir_1_2\n"
+        + "\tDir_2\n\tDir_3\n\tDir_4\n\tDir_5\n\t\tDir_5_1\n\t\tfile_5_1"
+        + "\n\t\tDir_5_2\n";
+    Tree testTree = new Tree();
+    assertEquals(compString,testTree.execute(), 0);
+  }
+}

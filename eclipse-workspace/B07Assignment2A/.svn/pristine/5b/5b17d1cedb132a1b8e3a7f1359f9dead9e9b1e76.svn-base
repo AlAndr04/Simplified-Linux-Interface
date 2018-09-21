@@ -1,0 +1,25 @@
+User Stories                                                                                  |Time Estimate
+
+As a user, I would like to make a directory.                                       	          |3 hours
+As a user, I would like to be told, if I inputted a wrong command.                 	          |4 hours
+As a user, I would like to be prompted for input.                                  	          |5 hours
+As a user, I would like my input to be passed through an interpreter               	          |7 hours
+As a user, I would like to store files and directories in a directory.                        |8 hours
+As a user, I would like to delete a directory.                                                |3 hours
+As a user, I would like to navigate between directories.                                      |4 hours
+As a user, I would like to see what's in the directory.                                       |9 hours
+As a user, I would like to output the path of the current directory path.                     |2 hours
+As a user, I would like to return to a past directory.   					     	          |4 hours
+As a user, I would like to save a directory to navigate it at a future time.	              |2 hours
+As a user, I would like to create a file.										              |1 hour
+As a user, I would like to modify the contents of a file.						              |2 hours
+As a user, I would like to add text to the contents of an already existing file.              |2 hours
+As a user, I would like to remove a file.										              |2 hours
+As a user, I would like to concatenate the contents of multiple files and output it.          |3 hours
+As a user, I would like to output the contents of a file.							          |2 hours
+As a user, I would like to output the manual for a particular command.			              |7 hours
+As a user, I would like to exit the program.									    		  |1 hours
+As a user, I would like to see my previous commands used during a session.		              |5 hours
+As a user, I would like to input text and have the exact contents displayed.			      |2 hours
+As a user, I would like to print out the file-system in a tree form. 						  |1 hours
+As a user, I would to find files or directories with a specific name in a specified directory.|7 hours

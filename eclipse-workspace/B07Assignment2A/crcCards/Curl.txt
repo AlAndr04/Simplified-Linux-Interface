@@ -1,0 +1,5 @@
+Class Name: Curl
+SubClasses: None
+ParentClasses: Commands
+Responsibilities: Retrieves file at given Url and adds it the current working directory
+Collaborators: Echo, Location, Output

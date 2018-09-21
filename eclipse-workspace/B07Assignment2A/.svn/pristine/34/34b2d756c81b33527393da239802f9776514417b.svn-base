@@ -1,0 +1,12 @@
+Class name: Cat
+Parent Class: Commands
+Responsibilities:
+*Display current contents given a filename
+*Concatenates the contents give two files and
+prints it
+Collaborators:
+*pwd
+*output
+*Directory
+*Traverse
+*File

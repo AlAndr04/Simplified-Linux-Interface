@@ -1,0 +1,8 @@
+Class name: FSElement
+Subclasses: file, dir
+Responsibilities:
+*Possesses a location in the file system relative to the root dir
+*Can be created/added
+*Can be opened
+*Can be deleted
+Collaborators:

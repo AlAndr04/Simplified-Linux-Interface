@@ -1,0 +1,10 @@
+Class name: Directory
+Parent Class: FSElement
+Subclasses:
+
+Responsibilities:
+*Able to contain other directories/files
+*Possesses parent directory and children/contents; fsObjects.
+*Can be the current/working directory
+Collaborators:
+
