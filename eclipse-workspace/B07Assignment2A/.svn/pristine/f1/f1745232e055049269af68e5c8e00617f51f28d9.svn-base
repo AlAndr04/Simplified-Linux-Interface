@@ -1,8 +1,0 @@
-Class name: parser
-Parent Class: Input
-Subclasses:
-
-Responsibilities:
-*Parses commands into the command itself and its parameters
-Collaborators:
-*Validator

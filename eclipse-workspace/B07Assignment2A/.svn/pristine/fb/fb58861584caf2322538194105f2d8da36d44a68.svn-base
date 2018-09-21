@@ -1,8 +1,0 @@
-Class name: file
-Parent Class: fsObjects
-Subclasses:
-
-Responsibilities:
-*Able to contain text/data/information
-Collaborators:
-*file

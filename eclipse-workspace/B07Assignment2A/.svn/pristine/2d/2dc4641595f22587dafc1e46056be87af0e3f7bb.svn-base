@@ -1,8 +1,0 @@
-Class name: Validator
-Parent Class:None
-Subclasses:None
-Responsibilities:
-*Tells whether or not input is a valid command with the correct parameters
-Collaborators: 
-*Parse
-*Output
