@@ -1,6 +1,0 @@
-Class name: File.txt
-Subclasses: FSElement
-Responsibilities:
-*Can contain text, data
-Collaborators:
-None

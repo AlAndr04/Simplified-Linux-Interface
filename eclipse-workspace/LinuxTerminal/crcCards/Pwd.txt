@@ -1,9 +1,0 @@
-Class name: Pwd
-Parent Class: Commands
-Subclasses:None
-
-Responsibilities:
-*Gives current pathname relative to root directory.
-Collaborators:
-*output
-*FSElement

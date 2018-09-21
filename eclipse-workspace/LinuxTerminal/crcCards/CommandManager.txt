@@ -1,7 +1,0 @@
-Class name: CommandManager
-Responsibilities:
-*Executes commands after the string has been validated as a command
-Collaborators:
-*Validator
-*Commands
-*Pwd

@@ -1,7 +1,0 @@
-Class name: Input
-Parent Class: None
-Subclasses: None
-Responsibilities:
-*Accepts input from user
-Collaborators: 
-*Command_Manager
